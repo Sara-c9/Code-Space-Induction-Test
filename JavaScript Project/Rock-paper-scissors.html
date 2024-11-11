@@ -23,13 +23,13 @@ const resultElement = document.getElementById('result');
 const playerChoiceElement = document.getElementById('playerChoice');
 const computerChoiceElement = document.getElementById('computerChoice');
 
-// Function to get computer choice
+// function to generate the computer choice randomly
 function getComputerChoice() {
   const randomChoice = Math.floor(Math.random() * 3);
   return choices[randomChoice];
 }
 
-// Function to determine the winner
+// function to chose the winner
 function getWinner(playerChoice, computerChoice) {
   if (playerChoice === computerChoice) {
     return 'It\'s a tie!';
@@ -44,18 +44,17 @@ function getWinner(playerChoice, computerChoice) {
   }
 }
 
-// Function to play the game
+// function to play the game
 function playGame(playerChoice) {
   const computerChoice = getComputerChoice();
   const result = getWinner(playerChoice, computerChoice);
-
-  // Update the UI
+// text that will show on the page 
   playerChoiceElement.textContent = `Player chose: ${playerChoice}`;
   computerChoiceElement.textContent = `Computer chose: ${computerChoice}`;
   resultElement.textContent = `${result}`;
 }
 
-// Adding event listeners
+// 
 const choiceElements = document.querySelectorAll('.choice');
 choiceElements.forEach(choice => {
   choice.addEventListener('click', () => playGame(choice.id));
