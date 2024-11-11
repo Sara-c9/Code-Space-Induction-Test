@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        const array = [10, 2, 3, 4, 7]; // create the array
+        function show() {
+            console.log('The content of the array is: ' + array);
+        } // function to show the content of the array
+
+        function max() {
+            array.sort((a,b) => a-b);
+            console.log('The max value in the array is: ' + array[array.length -1]);
+        } //functions to slect max number in the array
+        show();
+        max();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        //declaring a function
+        function factorial(number) {
+            let result = 1;
+            for (let i = number; i >=1; i--) {
+                result *= i;
+            }
+            return result;   
+        }
+
+        // prompt a window to enter the number
+        let number = parseInt(prompt('Enter a number: '));
+
+        //calling the function
+        console.log(factorial(number));
+    </script>
+</body>
+</html>
